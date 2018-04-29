@@ -1,0 +1,17 @@
+{
+    "name": "linvanda/codesay",
+    "description": "源码分析网站",
+    "type": "project",
+    "authors": [
+        {
+            "name": "linvanda",
+            "email": "1049180458@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "application/"
+        }
+    },
+    "require": {}
+}
