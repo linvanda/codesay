@@ -13,5 +13,8 @@
             "app\\": "application/"
         }
     },
-    "require": {}
+    "require": {
+        "twig/twig": "^2.0",
+        "catfan/Medoo": "^1.5"
+    }
 }

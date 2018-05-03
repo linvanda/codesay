@@ -2,13 +2,10 @@
 
 use \Yaf\Controller_Abstract;
 
-use app\library\Foo;
-
 class IndexController extends Controller_Abstract
 {
     public function indexAction()
     {
-        (new Foo())->bar();
-        $this->getView()->assign('content', 'hello yaf');
+        $this->display('index', ['content' => 'hello yaf']);
     }
 }

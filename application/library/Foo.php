@@ -6,6 +6,6 @@ class Foo
 {
     public function bar()
     {
-        echo 'bar';
+        echo 'bar4';
     }
 }
