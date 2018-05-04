@@ -57,11 +57,13 @@ class TwigAdapter implements View_Interface
         // 处理模板文件路径
         $this->setScriptPath($this->calcBaseViewPath($tpl));
 
-        if (!is_null($tpl_vars) && is_array($tpl_vars)) {
+        if (is_array($tpl_vars)) {
             $this->vars = $tpl_vars;
         }
 
+        // 设置路径
         $this->twig->getLoader()->setPaths($this->baseViewPath);
+        $this->twig->getLoader()->addPath($this->defaultViewPath, 'common');
 
         if (strpos($tpl, '.') === false) {
             $tpl .= '.' . Registry::get('config')['application']['view']['ext'];

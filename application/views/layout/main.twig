@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %} CodeSay - 源码分析社区</title>
+    {% block css %}
+        <link rel="stylesheet" href="css/dist/bootstrap.min.css" class="rel">
+        <link rel="stylesheet" href="css/dist/base.min.css" class="rel">
+    {% endblock %}
+</head>
+<body>
+{% include '@common/layout/header.twig' %}
+<div class="container">
+    {% block main %}{% endblock %}
+    {% include '@common/layout/footer.twig' %}
+</div>
+{% block js %}
+    <script src="js/dist/jquery.min.js"></script>
+    <script src="js/dist/popper.min.js"></script>
+    <script src="js/dist/bootstrap.min.js"></script>
+{% endblock %}
+</body>
+</html>

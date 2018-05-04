@@ -33,6 +33,6 @@ class Bootstrap extends Bootstrap_Abstract
 
     public function _initORM()
     {
-        Registry::set('db', new Medoo($this->config->toArray()));
+        Registry::set('db', new Medoo($this->config->toArray()['database']));
     }
 }
