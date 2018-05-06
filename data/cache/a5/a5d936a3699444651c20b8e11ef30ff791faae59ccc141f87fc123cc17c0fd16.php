@@ -64,9 +64,9 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     public function block_css($context, array $blocks = array())
     {
         // line 10
-        echo "        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/dist/bootstrap.min.css\" class=\"rel\">
-        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/dist/base.css\" class=\"rel\">
-        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/fonts/css/ionicons.min.css\">
+        echo "        <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/dist/bootstrap.min.css\" class=\"rel\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/dist/base.css\" class=\"rel\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/fonts/css/ionicons.min.css\">
     ";
     }
 
@@ -79,9 +79,9 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     public function block_js($context, array $blocks = array())
     {
         // line 20
-        echo "    <script type=\"text/javascript\" src=\"js/dist/jquery.min.js\"></script>
-    <script type=\"text/javascript\" src=\"js/dist/popper.min.js\"></script>
-    <script type=\"text/javascript\" src=\"js/dist/bootstrap.min.js\"></script>
+        echo "    <script type=\"text/javascript\" src=\"/js/dist/jquery.min.js\"></script>
+    <script type=\"text/javascript\" src=\"/js/dist/popper.min.js\"></script>
+    <script type=\"text/javascript\" src=\"/js/dist/bootstrap.min.js\"></script>
 ";
     }
 

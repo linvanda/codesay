@@ -49,7 +49,7 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
                     </div>
                 </div>
                 <div class=\"form-group\">
-                    <a class=\"change-mobile\" href=\"#\">变更手机</a>
+                    <a class=\"change-mobile\" href=\"/sign/changemobile\" target=\"_blank\">变更手机</a>
                 </div>
                 <div class=\"form-group\">
                     <button class=\"btn btn-primary w-100\">登录</button>
@@ -72,7 +72,7 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
         echo "    ";
         $this->displayParentBlock("css", $context, $blocks);
         echo "
-    <link type=\"text/css\" rel=\"stylesheet\" href=\"css/dist/sign/index.css?v=1\">
+    <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/dist/sign/index.css?v=1\">
 ";
     }
 
