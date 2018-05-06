@@ -1,0 +1,38 @@
+{% extends '@common/layout/main.twig' %}
+
+{% block main %}
+    <div class="sign">
+        <div class="wrapper">
+            <h3 class="title">登录</h3>
+            <form action="#" class="content">
+                <div class="form-group">
+                    <input class="form-control" placeholder="手机">
+                </div>
+                <div class="form-group form-row">
+                    <div class="col-8">
+                        <input class="form-control" placeholder="短信验证码">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-primary w-100">获取</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a class="change-mobile" href="#">变更手机</a>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary w-100">登录</button>
+                </div>
+            </form>
+            <div class="line-title">其它方式登录</div>
+            <div class="other row justify-content-center">
+                <div class="col-2"><a href="#"><img src="/img/github.png" alt="GitHub" title="GitHub"></a></div>
+                <div class="col-2"><a href="#"><img src="/img/wechat.png" alt="微信" title="微信"></a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="css/dist/sign/index.css?v=1">
+{% endblock %}

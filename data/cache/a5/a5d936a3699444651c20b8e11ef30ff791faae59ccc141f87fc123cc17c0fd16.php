@@ -38,26 +38,19 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     ";
         // line 9
         $this->displayBlock('css', $context, $blocks);
-        // line 13
+        // line 14
         echo "</head>
 <body>
 ";
-        // line 15
-        $this->loadTemplate("@common/layout/header.twig", "@common/layout/main.twig", 15)->display($context);
         // line 16
-        echo "<div class=\"container\">
-    ";
+        $this->loadTemplate("@common/layout/header.twig", "@common/layout/main.twig", 16)->display($context);
         // line 17
         $this->displayBlock('main', $context, $blocks);
         // line 18
-        echo "    ";
         $this->loadTemplate("@common/layout/footer.twig", "@common/layout/main.twig", 18)->display($context);
         // line 19
-        echo "</div>
-";
-        // line 20
         $this->displayBlock('js', $context, $blocks);
-        // line 25
+        // line 24
         echo "</body>
 </html>";
     }
@@ -71,8 +64,9 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     public function block_css($context, array $blocks = array())
     {
         // line 10
-        echo "        <link rel=\"stylesheet\" href=\"css/dist/bootstrap.min.css\" class=\"rel\">
-        <link rel=\"stylesheet\" href=\"css/dist/base.min.css\" class=\"rel\">
+        echo "        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/dist/bootstrap.min.css\" class=\"rel\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/dist/base.css\" class=\"rel\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"css/fonts/css/ionicons.min.css\">
     ";
     }
 
@@ -81,13 +75,13 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     {
     }
 
-    // line 20
+    // line 19
     public function block_js($context, array $blocks = array())
     {
-        // line 21
-        echo "    <script src=\"js/dist/jquery.min.js\"></script>
-    <script src=\"js/dist/popper.min.js\"></script>
-    <script src=\"js/dist/bootstrap.min.js\"></script>
+        // line 20
+        echo "    <script type=\"text/javascript\" src=\"js/dist/jquery.min.js\"></script>
+    <script type=\"text/javascript\" src=\"js/dist/popper.min.js\"></script>
+    <script type=\"text/javascript\" src=\"js/dist/bootstrap.min.js\"></script>
 ";
     }
 
@@ -103,7 +97,7 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
 
     public function getDebugInfo()
     {
-        return array (  88 => 21,  85 => 20,  80 => 17,  74 => 10,  71 => 9,  66 => 8,  61 => 25,  59 => 20,  56 => 19,  53 => 18,  51 => 17,  48 => 16,  46 => 15,  42 => 13,  40 => 9,  36 => 8,  27 => 1,);
+        return array (  82 => 20,  79 => 19,  74 => 17,  67 => 10,  64 => 9,  59 => 8,  54 => 24,  52 => 19,  50 => 18,  48 => 17,  46 => 16,  42 => 14,  40 => 9,  36 => 8,  27 => 1,);
     }
 
     public function getSourceContext()

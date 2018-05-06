@@ -1,0 +1,46 @@
+@import "variables";
+
+.sign {
+    background: $gray-200;
+    padding: 120px 0;
+    .wrapper {
+        width: 400px;
+        height: 480px;
+        margin: 0 auto;
+        background: $white;
+        display: block;
+        padding: $spacer-7;
+        box-shadow: $shadow;
+        border-radius: $round;
+        .title {
+            color: $primary;
+            text-align: center;
+            margin-bottom: $spacer-5;
+        }
+        .change-mobile {
+            font-size: .9rem;
+            color: $gray-600;
+        }
+        .line-title {
+            @include linetitle();
+            margin: $spacer-6 0 $spacer-2;
+        }
+        .other {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        .wrapper {
+            position:fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right:0;
+            box-shadow: none;
+            border-radius: 0;
+        }
+    }
+}

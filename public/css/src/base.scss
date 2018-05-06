@@ -1,3 +1,70 @@
-body {
-    background-color: gray;
+@import "variables";
+
+// 通用
+* {
+    outline: none;
+    font-family: $font-family-sans-serif!important;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color:    $gray-500!important;
+    font-size: .9rem;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:    $gray-500!important;
+    font-size: .9rem;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:    $gray-500!important;
+    font-size: .9rem;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:    $gray-500!important;
+    font-size: .9rem;
+}
+
+.code-badge {
+    background-color: $white;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+// 页脚
+.code-footer {
+    text-align: center;
+    padding: 40px 0;
+}
+
+// 导航
+.code-nav {
+    background-color: $primary;
+    .navbar {
+        padding: 0!important;
+        line-height: 2.5rem!important;
+        .nav-item {
+            margin: 0!important;
+            padding: 0 12px;
+            &.active, &:hover {
+                background-color: lighten($primary, 9%);
+                .nav-link {
+                    color: rgba(255, 255, 255, 1)!important;
+                }
+            }
+            .nav-link {
+                color: rgba(255, 255, 255, .75)!important;
+            }
+        }
+        .search {
+            border: 0;
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, .7);
+            width: 240px;
+            &:focus {
+                background-color: rgba(255, 255, 255, .9);
+            }
+        }
+    }
 }

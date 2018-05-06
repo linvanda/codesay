@@ -57,6 +57,8 @@ class TwigAdapter implements View_Interface
         // 处理模板文件路径
         $this->setScriptPath($this->calcBaseViewPath($tpl));
 
+        $tpl_vars = $this->setCommonVars($tpl_vars);
+
         if (is_array($tpl_vars)) {
             $this->vars = $tpl_vars;
         }
@@ -70,6 +72,19 @@ class TwigAdapter implements View_Interface
         }
 
         return $this->twig->render($tpl,$this->vars);
+    }
+
+    private function setCommonVars($vars)
+    {
+        $commonVars = [
+            'base_url' => Registry::get('config')['base_url']
+        ];
+
+        if (!$vars['app']) {
+            $vars['app'] = $commonVars;
+        }
+
+        return $vars;
     }
 
     private function calcBaseViewPath($tpl)

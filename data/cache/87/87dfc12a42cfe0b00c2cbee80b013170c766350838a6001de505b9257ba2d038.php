@@ -20,8 +20,8 @@ class __TwigTemplate_111a0407af8510f5d6b2d7416d968625ba8bc32865ff9f41cfb39e6169e
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"footer\">
-    footer
+        echo "<div class=\"code-footer\">
+    CodeSay &copy; 2018 版权所有
 </div>";
     }
 
