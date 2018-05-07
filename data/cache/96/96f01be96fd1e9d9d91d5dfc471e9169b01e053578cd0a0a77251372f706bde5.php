@@ -35,23 +35,30 @@ class __TwigTemplate_20886c31e72babbf2acc3f4e73dfceed6d45fc9d5ce4c78bbae2f379efe
     {
         // line 4
         echo "    <div class=\"container\">
-        ";
-        // line 5
-        $this->displayBlock('content', $context, $blocks);
-        // line 6
-        echo "        ";
-        $this->displayBlock('side', $context, $blocks);
+        <div class=\"row\">
+            <div class=\"col-12 col-lg-9\">
+                ";
         // line 7
-        echo "    </div>
+        $this->displayBlock('content', $context, $blocks);
+        // line 8
+        echo "            </div>
+            <div class=\"col-lg-3 d-none d-lg-block\">
+                ";
+        // line 10
+        $this->displayBlock('side', $context, $blocks);
+        // line 11
+        echo "            </div>
+        </div>
+    </div>
 ";
     }
 
-    // line 5
+    // line 7
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 6
+    // line 10
     public function block_side($context, array $blocks = array())
     {
     }
@@ -68,7 +75,7 @@ class __TwigTemplate_20886c31e72babbf2acc3f4e73dfceed6d45fc9d5ce4c78bbae2f379efe
 
     public function getDebugInfo()
     {
-        return array (  55 => 6,  50 => 5,  45 => 7,  42 => 6,  40 => 5,  37 => 4,  34 => 3,  15 => 1,);
+        return array (  62 => 10,  57 => 7,  50 => 11,  48 => 10,  44 => 8,  42 => 7,  37 => 4,  34 => 3,  15 => 1,);
     }
 
     public function getSourceContext()

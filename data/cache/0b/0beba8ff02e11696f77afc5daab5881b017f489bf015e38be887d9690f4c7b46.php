@@ -38,7 +38,7 @@ class __TwigTemplate_2608be30e1f965b1a22a6d6a38c4230b7e472785e5cf445fb9dbe70e5b5
         ob_start();
         try {
             // line 3
-            echo "
+            echo "dongti
 ";
 
             return ('' === $tmp = ob_get_contents()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());

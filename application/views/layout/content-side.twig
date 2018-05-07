@@ -2,7 +2,13 @@
 
 {% block main %}
     <div class="container">
-        {% block content %}{% endblock %}
-        {% block side %}{% endblock %}
+        <div class="row">
+            <div class="col-12 col-lg-9">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-lg-3 d-none d-lg-block">
+                {% block side %}{% endblock %}
+            </div>
+        </div>
     </div>
 {% endblock %}
