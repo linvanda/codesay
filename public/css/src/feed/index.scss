@@ -1,0 +1,27 @@
+@import "variables";
+
+.feed {
+    padding-top: $spacer-4;
+    padding-bottom: $spacer-4;
+
+    .content, .avatar {
+        padding-left: $spacer-2;
+        padding-right: $spacer-2;
+    }
+    .avatar {
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: 1px solid $gray-300;
+        }
+    }
+    .content {
+        .desc {
+            img {
+                max-width: 120px;
+                max-height: 120px;
+            }
+        }
+    }
+}

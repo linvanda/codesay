@@ -1,4 +1,24 @@
 {# 动态 #}
 {% macro feed(user, action, target, time, detail={}) %}
-dongti
+<div class="d-flex feed">
+    <div class="avatar">
+        <a href="#"><img src="{{ user.avatar }}" alt=""></a>
+    </div>
+    <div class="content w-100">
+        <div class="title d-flex mb-2">
+            <div class="t mr-auto">
+                <a href="#">{{ user.name }}</a> <span class="text-muted">{{ action }}</span> <span class="target">{{ target }}</span>
+            </div>
+            <div class="text-muted">{{ time }}</div>
+        </div>
+        {% if detail %}
+            <div class="desc">
+                {% if detail.img %}
+                    <img src="{{ detail.img }}" class="img-thumbnail float-left mr-2">
+                {% endif %}
+                {{ detail.text|default('') }}
+            </div>
+        {% endif %}
+    </div>
+</div>
 {% endmacro %}

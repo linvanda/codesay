@@ -2,9 +2,15 @@
 {% from '@common/utils/macro.twig' import feed %}
 
 {% block content %}
-    {{ feed({name: '三'}, '发布了文章', '《Laravel 源码解析》', '3 小时前') }}
+    {{ feed({name: '张三', avatar: 'http://pic5.58cdn.com.cn/zhuanzh/n_v1bkuyfvltjuifpjbky4aq.jpg'}, '发布了文章', '《Laravel 源码解析》', '3 小时前',
+        { img: 'http://img3.duitang.com/uploads/item/201510/11/20151011213530_YGwKm.jpeg', text: '文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述' }) }}
 {% endblock %}
 
 {% block side %}
     side
+{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="/css/dist/feed/index.css?v=1">
 {% endblock %}

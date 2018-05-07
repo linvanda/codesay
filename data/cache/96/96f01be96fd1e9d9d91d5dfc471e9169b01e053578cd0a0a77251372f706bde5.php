@@ -36,13 +36,13 @@ class __TwigTemplate_20886c31e72babbf2acc3f4e73dfceed6d45fc9d5ce4c78bbae2f379efe
         // line 4
         echo "    <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-12 col-lg-9\">
+            <div class=\"col-12 col-md-9\">
                 ";
         // line 7
         $this->displayBlock('content', $context, $blocks);
         // line 8
         echo "            </div>
-            <div class=\"col-lg-3 d-none d-lg-block\">
+            <div class=\"col-lg-3 d-none d-md-block\">
                 ";
         // line 10
         $this->displayBlock('side', $context, $blocks);
