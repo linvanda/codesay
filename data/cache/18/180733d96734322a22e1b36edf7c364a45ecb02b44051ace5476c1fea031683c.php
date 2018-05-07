@@ -15,6 +15,7 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
         $this->parent = $this->loadTemplate("@common/layout/main.twig", "sign/index.twig", 1);
         $this->blocks = array(
             'main' => array($this, 'block_main'),
+            'footer' => array($this, 'block_footer'),
             'css' => array($this, 'block_css'),
         );
     }
@@ -36,7 +37,7 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
         echo "    <div class=\"sign\">
         <div class=\"wrapper\">
             <h3 class=\"title\">登录</h3>
-            <form action=\"#\" class=\"content\">
+            <form action=\"/sign/bindemail\" class=\"content\">
                 <div class=\"form-group\">
                     <input class=\"form-control\" placeholder=\"手机\">
                 </div>
@@ -48,8 +49,8 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
                         <button class=\"btn btn-outline-primary w-100\">获取</button>
                     </div>
                 </div>
-                <div class=\"form-group\">
-                    <a class=\"change-mobile\" href=\"/sign/changemobile\" target=\"_blank\">变更手机</a>
+                <div class=\"form-group float-right\">
+                    <a class=\"change-mobile text-muted\" href=\"/sign/changemobile\" target=\"_blank\">变更手机</a>
                 </div>
                 <div class=\"form-group\">
                     <button class=\"btn btn-primary w-100\">登录</button>
@@ -66,9 +67,17 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
     }
 
     // line 35
-    public function block_css($context, array $blocks = array())
+    public function block_footer($context, array $blocks = array())
     {
         // line 36
+        echo "    ";
+        $this->loadTemplate("@common/layout/footer-white.twig", "sign/index.twig", 36)->display($context);
+    }
+
+    // line 39
+    public function block_css($context, array $blocks = array())
+    {
+        // line 40
         echo "    ";
         $this->displayParentBlock("css", $context, $blocks);
         echo "
@@ -88,7 +97,7 @@ class __TwigTemplate_faec84c688e3b0a674d0c6f6852d01b9dc9885d1d89decd0ac4ca6730fb
 
     public function getDebugInfo()
     {
-        return array (  72 => 36,  69 => 35,  36 => 4,  33 => 3,  15 => 1,);
+        return array (  81 => 40,  78 => 39,  73 => 36,  70 => 35,  37 => 4,  34 => 3,  15 => 1,);
     }
 
     public function getSourceContext()

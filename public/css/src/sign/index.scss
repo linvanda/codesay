@@ -2,7 +2,7 @@
 
 .sign {
     background: $gray-200;
-    padding: 120px 0;
+    padding: 150px 0;
     .wrapper {
         width: 400px;
         height: 480px;
@@ -19,7 +19,6 @@
         }
         .change-mobile {
             font-size: .9rem;
-            color: $gray-600;
         }
         .line-title {
             @include linetitle();
@@ -28,24 +27,11 @@
         .other {
             img {
                 width: 100%;
+                max-width: 26px;
+                max-height: 26px;
                 height: auto;
             }
         }
     }
-    @media (max-width: map_get($grid-breakpoints, sm)) {
-        .wrapper {
-            position:fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            right:0;
-            box-shadow: none;
-            border-radius: 0;
-        }
-    }
-}
-
-.change-mobile {
-    width: 400px;
-    margin: 120px auto;
+    @include fullscreen('.wrapper');
 }

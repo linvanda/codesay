@@ -16,7 +16,9 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'css' => array($this, 'block_css'),
+            'header' => array($this, 'block_header'),
             'main' => array($this, 'block_main'),
+            'footer' => array($this, 'block_footer'),
             'js' => array($this, 'block_js'),
         );
     }
@@ -43,14 +45,20 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
 <body>
 ";
         // line 16
-        $this->loadTemplate("@common/layout/header.twig", "@common/layout/main.twig", 16)->display($context);
-        // line 17
-        $this->displayBlock('main', $context, $blocks);
-        // line 18
-        $this->loadTemplate("@common/layout/footer.twig", "@common/layout/main.twig", 18)->display($context);
+        $this->displayBlock('header', $context, $blocks);
         // line 19
+        echo "<div style=\"background: #fff;\">
+    ";
+        // line 20
+        $this->displayBlock('main', $context, $blocks);
+        // line 21
+        echo "</div>
+";
+        // line 22
+        $this->displayBlock('footer', $context, $blocks);
+        // line 25
         $this->displayBlock('js', $context, $blocks);
-        // line 24
+        // line 30
         echo "</body>
 </html>";
     }
@@ -70,15 +78,31 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     ";
     }
 
-    // line 17
+    // line 16
+    public function block_header($context, array $blocks = array())
+    {
+        // line 17
+        echo "    ";
+        $this->loadTemplate("@common/layout/header.twig", "@common/layout/main.twig", 17)->display($context);
+    }
+
+    // line 20
     public function block_main($context, array $blocks = array())
     {
     }
 
-    // line 19
+    // line 22
+    public function block_footer($context, array $blocks = array())
+    {
+        // line 23
+        echo "    ";
+        $this->loadTemplate("@common/layout/footer.twig", "@common/layout/main.twig", 23)->display($context);
+    }
+
+    // line 25
     public function block_js($context, array $blocks = array())
     {
-        // line 20
+        // line 26
         echo "    <script type=\"text/javascript\" src=\"/js/dist/jquery.min.js\"></script>
     <script type=\"text/javascript\" src=\"/js/dist/popper.min.js\"></script>
     <script type=\"text/javascript\" src=\"/js/dist/bootstrap.min.js\"></script>
@@ -90,14 +114,9 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
         return "@common/layout/main.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  82 => 20,  79 => 19,  74 => 17,  67 => 10,  64 => 9,  59 => 8,  54 => 24,  52 => 19,  50 => 18,  48 => 17,  46 => 16,  42 => 14,  40 => 9,  36 => 8,  27 => 1,);
+        return array (  106 => 26,  103 => 25,  98 => 23,  95 => 22,  90 => 20,  85 => 17,  82 => 16,  75 => 10,  72 => 9,  67 => 8,  62 => 30,  60 => 25,  58 => 22,  55 => 21,  53 => 20,  50 => 19,  48 => 16,  44 => 14,  42 => 9,  38 => 8,  29 => 1,);
     }
 
     public function getSourceContext()

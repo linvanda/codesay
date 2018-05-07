@@ -86,3 +86,22 @@ $spacer-7: 3rem;
         right: 0;
     }
 }
+
+@mixin fullscreen($class, $screen: sm, $hasNav: true) {
+    @media (max-width: map_get($grid-breakpoints, $screen)) {
+        #{$class} {
+            position:fixed;
+            width: 100%;
+            height: 100%;
+            right:0;
+            box-shadow: none;
+            border-radius: 0;
+            @if $hasNav {
+                top: 3.125rem;
+            } @else {
+                top: 0;
+                z-index: 2000;
+            }
+        }
+    }
+}

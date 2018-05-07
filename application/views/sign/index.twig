@@ -4,7 +4,7 @@
     <div class="sign">
         <div class="wrapper">
             <h3 class="title">登录</h3>
-            <form action="#" class="content">
+            <form action="/sign/bindemail" class="content">
                 <div class="form-group">
                     <input class="form-control" placeholder="手机">
                 </div>
@@ -16,8 +16,8 @@
                         <button class="btn btn-outline-primary w-100">获取</button>
                     </div>
                 </div>
-                <div class="form-group">
-                    <a class="change-mobile" href="/sign/changemobile" target="_blank">变更手机</a>
+                <div class="form-group float-right">
+                    <a class="change-mobile text-muted" href="/sign/changemobile" target="_blank">变更手机</a>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary w-100">登录</button>
@@ -30,6 +30,10 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block footer %}
+    {% include '@common/layout/footer-white.twig' %}
 {% endblock %}
 
 {% block css %}

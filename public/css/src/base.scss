@@ -5,6 +5,9 @@
     outline: none;
     font-family: $font-family-sans-serif!important;
 }
+body {
+    background: $gray-100;
+}
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color:    $gray-500!important;
@@ -31,17 +34,34 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     height: 8px;
     border-radius: 4px;
 }
+.btn {
+    padding: .375rem 1.5rem!important;
+}
+.text-muted {
+    color: $gray-500!important;
+}
+.py-6 {
+    padding-top: $spacer-4 * 4;
+    padding-bottom: $spacer-4 * 4;
+}
+.py-7 {
+    padding-top: $spacer-4 * 5;
+    padding-bottom: $spacer-4 * 5;
+}
 
 // 页脚
 .code-footer {
     color: $gray-500;
     text-align: center;
     padding: 40px 0;
+    background: $gray-100;
 }
 
 // 导航
 .code-nav {
     background-color: $primary;
+    position: relative;
+    z-index: 1000;
     .navbar {
         padding: 0!important;
         line-height: 2.5rem!important;

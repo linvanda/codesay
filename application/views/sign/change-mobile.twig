@@ -1,84 +1,86 @@
 {% extends '@common/layout/content.twig' %}
 
 {% block content %}
-    <form class="change-mobile" action="">
-        <div class="step1">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="原手机号">
-            </div>
-            <div class="form-group">
-                <p class="mb-0 font-weight-bold">验证方式：</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="phone" checked id="type1" name="checktype">
-                    <label class="form-check-label" for="type1">
-                        原手机能收到验证码
-                    </label>
+    <div class="row justify-content-center py-7">
+        <form class="col-12 col-md-6 col-lg-4" action="#">
+            <div class="step1">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="原手机号">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="email" id="type2" name="checktype">
-                    <label class="form-check-label" for="type2">
-                        原手机收不到验证码，用邮箱验证
-                    </label>
+                <div class="form-group">
+                    <p class="mb-0 font-weight-bold">验证方式：</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="phone" checked id="type1" name="checktype">
+                        <label class="form-check-label" for="type1">
+                            原手机能收到验证码
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="email" id="type2" name="checktype">
+                        <label class="form-check-label" for="type2">
+                            原手机收不到验证码，用邮箱验证
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class="mt-5 text-center">
-                <button class="btn btn-primary">下一步 <i class="icon ion-ios-arrow-right"></i></button>
-            </div>
-        </div>
-        <div class="step2 type-a">
-            <p class="text-muted">已向手机 18687987876 发送短信验证码</p>
-            <div class="form-group form-row">
-                <div class="col-8">
-                    <input type="text" class="form-control" placeholder="短信验证码">
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-outline-primary w-100">重新发送</button>
+                <div class="mt-5 text-center">
+                    <button class="btn btn-primary">下一步 <i class="icon ion-ios-arrow-right"></i></button>
                 </div>
             </div>
-            <div class="mt-5 text-center">
-                <a class="text-muted" href="#"><i class="icon ion-ios-arrow-left"></i> 上一步</a>&nbsp;
-                <button class="btn btn-primary">下一步 <i class="icon ion-ios-arrow-right"></i></button>
-            </div>
-        </div>
-        <div class="step2 type-b">
-            <p class="text-muted">已向邮箱 1039383833@qq.com 发送验证码</p>
-            <div class="form-group form-row">
-                <div class="col-8">
-                    <input type="text" class="form-control" placeholder="验证码">
+            <div class="step2 type-a">
+                <p class="text-muted">已向手机 18687987876 发送短信验证码</p>
+                <div class="form-group form-row">
+                    <div class="col-8">
+                        <input type="text" class="form-control" placeholder="短信验证码">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-primary w-100">重新发送</button>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <button class="btn btn-outline-primary w-100">重新发送</button>
-                </div>
-            </div>
-            <div class="mt-5 text-center">
-                <a class="text-muted" href="#"><i class="icon ion-ios-arrow-left"></i> 上一步</a>&nbsp;
-                <button class="btn btn-primary">下一步 <i class="icon ion-ios-arrow-right"></i></button>
-            </div>
-        </div>
-        <div class="step2 error">
-            <p class="text-muted text-center">手机 18093837443 未绑定邮箱</p>
-            <div class="text-center mt-4">
-                <button class="btn btn-primary"><i class="icon ion-ios-arrow-left"></i> 返回</button>
-            </div>
-        </div>
-        <div class="step3">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="新手机号码">
-            </div>
-            <div class="form-group form-row">
-                <div class="col-8">
-                    <input type="text" class="form-control" placeholder="短信验证码">
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-outline-primary w-100">获取</button>
+                <div class="mt-5 text-center">
+                    <a class="text-muted" href="#"><i class="icon ion-ios-arrow-left"></i> 上一步</a>&nbsp;
+                    <button class="btn btn-primary">下一步 <i class="icon ion-ios-arrow-right"></i></button>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a class="text-muted" href="#"><i class="icon ion-ios-arrow-left"></i> 上一步</a>&nbsp;
-                <button class="btn btn-primary">确定</button>
+            <div class="step2 type-b">
+                <p class="text-muted">已向邮箱 1039383833@qq.com 发送验证码</p>
+                <div class="form-group form-row">
+                    <div class="col-8">
+                        <input type="text" class="form-control" placeholder="验证码">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-primary w-100">重新发送</button>
+                    </div>
+                </div>
+                <div class="mt-5 text-center">
+                    <a class="text-muted" href="#"><i class="icon ion-ios-arrow-left"></i> 上一步</a>&nbsp;
+                    <button class="btn btn-primary">下一步 <i class="icon ion-ios-arrow-right"></i></button>
+                </div>
             </div>
-        </div>
-    </form>
+            <div class="step2 error">
+                <p class="text-muted text-center">手机 18093837443 未绑定邮箱</p>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary"><i class="icon ion-ios-arrow-left"></i> 返回</button>
+                </div>
+            </div>
+            <div class="step3">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="新手机号码">
+                </div>
+                <div class="form-group form-row">
+                    <div class="col-8">
+                        <input type="text" class="form-control" placeholder="短信验证码">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-outline-primary w-100">获取</button>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a class="text-muted" href="#"><i class="icon ion-ios-arrow-left"></i> 上一步</a>&nbsp;
+                    <button class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}
 
 {% block css %}

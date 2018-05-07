@@ -17,4 +17,14 @@ class SignController extends Controller_Abstract
     {
         $this->display('change-mobile');
     }
+
+    public function bindEmailAction()
+    {
+        $this->display('bind-email');
+    }
+
+    public function bindMobileAction()
+    {
+        $this->display('bind-mobile');
+    }
 }
