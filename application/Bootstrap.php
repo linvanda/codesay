@@ -6,6 +6,8 @@ use \Yaf\Registry;
 use \Yaf\Dispatcher;
 use \app\library\TwigAdapter;
 use Medoo\Medoo;
+use HTMLPurifier;
+use HTMLPurifier_Config;
 
 class Bootstrap extends Bootstrap_Abstract
 {
@@ -34,5 +36,13 @@ class Bootstrap extends Bootstrap_Abstract
     public function _initORM()
     {
         Registry::set('db', new Medoo($this->config->toArray()['database']));
+    }
+
+    public function _initHTMLPurifier()
+    {
+        $config = HTMLPurifier_Config::createDefault();
+        $config->set('Cache', 'SerializerPath', APP_PATH . 'data/cache');
+
+        Registry::set('purifier', new HTMLPurifier($config));
     }
 }

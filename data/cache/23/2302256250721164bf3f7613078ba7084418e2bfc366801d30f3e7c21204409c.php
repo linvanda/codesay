@@ -33,8 +33,8 @@ class __TwigTemplate_5387186e628e44292a6cfcefda5b5cde63a9b3aa737e123be09fb1568cf
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "    <div class=\"row justify-content-center my-5\">
-        <form class=\"col-12 col-sm-6 col-lg-4\" action=\"#\">
+        echo "    <div class=\"row justify-content-center py-7\">
+        <form class=\"col-12 col-md-6 col-lg-4\" action=\"#\">
             <div class=\"form-group\">
                 <h3 class=\"form-text text-primary text-center\">绑定手机</h3>
             </div>

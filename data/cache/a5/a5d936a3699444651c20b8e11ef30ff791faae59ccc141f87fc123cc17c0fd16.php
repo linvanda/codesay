@@ -57,8 +57,11 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
         // line 22
         $this->displayBlock('footer', $context, $blocks);
         // line 25
+        echo "
+";
+        // line 26
         $this->displayBlock('js', $context, $blocks);
-        // line 30
+        // line 32
         echo "</body>
 </html>";
     }
@@ -73,8 +76,8 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
     {
         // line 10
         echo "        <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/dist/bootstrap.min.css\" class=\"rel\">
-        <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/dist/base.css\" class=\"rel\">
         <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/fonts/css/ionicons.min.css\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"/css/dist/base.css\" class=\"rel\">
     ";
     }
 
@@ -99,13 +102,14 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
         $this->loadTemplate("@common/layout/footer.twig", "@common/layout/main.twig", 23)->display($context);
     }
 
-    // line 25
+    // line 26
     public function block_js($context, array $blocks = array())
     {
-        // line 26
-        echo "    <script type=\"text/javascript\" src=\"/js/dist/jquery.min.js\"></script>
-    <script type=\"text/javascript\" src=\"/js/dist/popper.min.js\"></script>
-    <script type=\"text/javascript\" src=\"/js/dist/bootstrap.min.js\"></script>
+        // line 27
+        echo "    <script src=\"/js/dist/jquery.min.js\"></script>
+    <script src=\"/js/dist/popper.min.js\"></script>
+    <script src=\"/js/dist/bootstrap.min.js\"></script>
+    <script src=\"/js/dist/art-template.min.js\"></script>
 ";
     }
 
@@ -116,7 +120,7 @@ class __TwigTemplate_4a25746a12b739dce5317b98dabedf230584b263814ea18b900378a5cd2
 
     public function getDebugInfo()
     {
-        return array (  106 => 26,  103 => 25,  98 => 23,  95 => 22,  90 => 20,  85 => 17,  82 => 16,  75 => 10,  72 => 9,  67 => 8,  62 => 30,  60 => 25,  58 => 22,  55 => 21,  53 => 20,  50 => 19,  48 => 16,  44 => 14,  42 => 9,  38 => 8,  29 => 1,);
+        return array (  109 => 27,  106 => 26,  101 => 23,  98 => 22,  93 => 20,  88 => 17,  85 => 16,  78 => 10,  75 => 9,  70 => 8,  65 => 32,  63 => 26,  60 => 25,  58 => 22,  55 => 21,  53 => 20,  50 => 19,  48 => 16,  44 => 14,  42 => 9,  38 => 8,  29 => 1,);
     }
 
     public function getSourceContext()
